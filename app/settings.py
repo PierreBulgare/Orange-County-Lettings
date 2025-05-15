@@ -1,6 +1,9 @@
 import os
 import sys
+import logging
 import sentry_sdk
+from sentry_sdk.integrations.logging import LoggingIntegration
+from sentry_sdk.integrations.django import DjangoIntegration
 
 from pathlib import Path
 
@@ -127,7 +130,19 @@ STATICFILES_DIRS = [BASE_DIR / "static",]
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+logging.basicConfig(level=logging.INFO)
+
 sentry_sdk.init(
     dsn="https://c0c0e33da78e8c14009885cb9f2285c8@o4509118924128256.ingest.de.sentry.io/4509327869476944",
+    integrations=[
+        DjangoIntegration(),
+        LoggingIntegration(
+            level=logging.INFO,
+            event_level=logging.ERROR
+        ),
+        ],
+    traces_sample_rate=1.0,
     send_default_pii=True,
+    environment="dev",
+    debug=True
 )
