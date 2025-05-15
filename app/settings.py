@@ -1,5 +1,6 @@
 import os
 import sys
+import sentry_sdk
 
 from pathlib import Path
 
@@ -14,7 +15,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'fp$9^593hsriajg$_%=5trot9g!1qa@ew(o-1#@=&4%=hp46(s'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['127.0.0.1', 'localhost']
 
@@ -125,3 +126,8 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [BASE_DIR / "static",]
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+sentry_sdk.init(
+    dsn="https://c0c0e33da78e8c14009885cb9f2285c8@o4509118924128256.ingest.de.sentry.io/4509327869476944",
+    send_default_pii=True,
+)
