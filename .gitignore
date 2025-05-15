@@ -3,3 +3,6 @@
 venv
 .flake8
 flake8-report/
+htmlcov/
+.pytest_cache/
+.coverage
