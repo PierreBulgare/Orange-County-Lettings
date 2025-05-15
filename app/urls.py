@@ -1,5 +1,6 @@
 from django.contrib import admin
 from django.urls import path
+from django.conf.urls import handler404, handler500
 
 from oc_lettings_site import views
 from lettings import views as lettings_views
@@ -13,3 +14,6 @@ urlpatterns = [
     path('profiles/<str:username>/', profiles_views.profile, name='profile'),
     path('admin/', admin.site.urls),
 ]
+
+handler404 = 'oc_lettings_site.views.error_404'
+handler500 = 'oc_lettings_site.views.error_500'
