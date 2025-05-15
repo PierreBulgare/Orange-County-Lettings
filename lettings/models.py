@@ -3,6 +3,16 @@ from django.core.validators import MaxValueValidator, MinLengthValidator
 
 
 class Address(models.Model):
+    """
+    Modèle représentant une adresse.
+    Attributs:
+        number (int): Numéro du lieu.
+        street (str): Nom de la rue.
+        city (str): Nom de la ville.
+        state (str): État ou province.
+        zip_code (int): Code postal.
+        country_iso_code (str): Code ISO du pays.
+    """
     number = models.PositiveIntegerField(validators=[MaxValueValidator(9999)])
     street = models.CharField(max_length=64)
     city = models.CharField(max_length=64)
@@ -20,6 +30,12 @@ class Address(models.Model):
 
 
 class Letting(models.Model):
+    """
+    Modèle représentant une location.
+    Attributs:
+        title (str): Nom de la location.
+        address (Address): Adresse de la location.
+    """
     title = models.CharField(max_length=256)
     address = models.OneToOneField(Address, on_delete=models.CASCADE)
 
