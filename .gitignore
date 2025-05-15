@@ -1,3 +1,5 @@
 **/__pycache__
 *.pyc
 venv
+.flake8
+flake8-report/
