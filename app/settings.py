@@ -142,7 +142,5 @@ sentry_sdk.init(
         ),
         ],
     traces_sample_rate=1.0,
-    send_default_pii=True,
-    environment="dev",
-    debug=True
+    send_default_pii=True
 )

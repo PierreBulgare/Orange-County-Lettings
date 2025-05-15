@@ -13,7 +13,7 @@ class Profile(models.Model):
     favorite_city = models.CharField(max_length=64, blank=True)
 
     class Meta:
-        db_table = 'oc_lettings_site_profile'
+        db_table = 'profile'
 
     def __str__(self):
         return self.user.username

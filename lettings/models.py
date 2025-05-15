@@ -21,7 +21,7 @@ class Address(models.Model):
     country_iso_code = models.CharField(max_length=3, validators=[MinLengthValidator(3)])
 
     class Meta:
-        db_table = 'oc_lettings_site_address'
+        db_table = 'address'
         verbose_name = 'Address'
         verbose_name_plural = 'Addresses'
 
@@ -40,7 +40,7 @@ class Letting(models.Model):
     address = models.OneToOneField(Address, on_delete=models.CASCADE)
 
     class Meta:
-        db_table = 'oc_lettings_site_letting'
+        db_table = 'letting'
 
     def __str__(self):
         return self.title
