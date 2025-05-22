@@ -4,11 +4,12 @@ Utilisation
 Lancement de l'application
 --------------------------
 
-Après avoir suivi les étapes d'installation,
- vous pouvez lancer le serveur de développement Django avec la commande :
+Après avoir suivi les étapes d'installation, vous pouvez lancer le serveur de développement Django avec la commande :
 
 python manage.py runserver
+
 Ouvrez ensuite votre navigateur et rendez-vous à l'adresse :
+
 http://127.0.0.1:8000/
 
 Navigation dans l'application

@@ -5,8 +5,7 @@ API et URLs
 Structure des URLs
 ------------------
 
-Le projet Orange County Lettings expose différentes
- routes pour accéder aux fonctionnalités principales :
+Le projet Orange County Lettings expose différentes routes pour accéder aux fonctionnalités principales :
 
 - `/` : Page d'accueil de l'application.
 - `/profiles/` : Liste des profils utilisateurs.
@@ -17,8 +16,7 @@ Le projet Orange County Lettings expose différentes
 Exemple d'utilisation
 ---------------------
 
-Pour accéder à la liste des profils,
- ouvrez simplement l’URL suivante dans votre navigateur :
+Pour accéder à la liste des profils, ouvrez simplement l’URL suivante dans votre navigateur :
 
 http://127.0.0.1:8000/profiles/
 
