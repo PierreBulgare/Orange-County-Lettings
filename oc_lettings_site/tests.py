@@ -2,6 +2,7 @@ import pytest
 from django.urls import reverse, resolve
 from lettings.models import Address, Letting
 
+
 @pytest.fixture
 def address():
     return Address.objects.create(
@@ -20,6 +21,7 @@ def letting(address):
         title="Test Letting",
         address=address
     )
+
 
 def test_index_url():
     url = reverse('index')

@@ -22,8 +22,6 @@ DEBUG = os.environ.get('DJANGO_DEBUG', 'False') == 'True'
 
 ALLOWED_HOSTS = os.environ.get('DJANGO_ALLOWED_HOSTS', 'localhost').split(',')
 
-
-
 # Application definition
 
 INSTALLED_APPS = [
@@ -135,7 +133,8 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 logging.basicConfig(level=logging.INFO)
 
 sentry_sdk.init(
-    dsn="https://c0c0e33da78e8c14009885cb9f2285c8@o4509118924128256.ingest.de.sentry.io/4509327869476944",
+    dsn="https://c0c0e33da78e8c14009885cb9f2285c8@o4509118924128256"
+        ".ingest.de.sentry.io/4509327869476944",
     integrations=[
         DjangoIntegration(),
         LoggingIntegration(
@@ -149,4 +148,3 @@ sentry_sdk.init(
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
-

@@ -1,6 +1,5 @@
 from django.contrib import admin
 from django.urls import path
-from django.conf.urls import handler404, handler500
 
 from oc_lettings_site import views
 from lettings import views as lettings_views
