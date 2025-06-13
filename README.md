@@ -11,6 +11,8 @@ Ce projet a pour but de mettre à l'échelle l'application en utilisant une arch
 
 Fork à partir de [Python-OC-Lettings-FR](https://github.com/OpenClassrooms-Student-Center/Python-OC-Lettings-FR)
 
+Documentation : [Read The Docs](https://orange-county-lettings-docs.readthedocs.io/fr/latest)
+
 ## ⚙️ Fonctionnalités
 
 - Affichage d’un catalogue de biens disponibles à la location
