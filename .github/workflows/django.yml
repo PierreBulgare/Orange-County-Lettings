@@ -51,3 +51,9 @@ jobs:
         context: .
         push: true
         tags: pierrebulgare/orange-county-lettings:latest
+
+    - name: Trigger Deploy on Render.com
+      run: |
+        curl -X POST "${{ secrets.DEPLOY_HOOK }}"
+
+
