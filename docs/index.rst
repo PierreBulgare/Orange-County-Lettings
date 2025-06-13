@@ -3,12 +3,13 @@ Orange County Lettings
 
 Bienvenue dans la documentation de **Orange County Lettings** !
 
-Orange County Lettings est une application web Django de gestion de location immobilières.
+Orange County Lettings est une application web Django de gestion de location.
 
 Présentation du projet
 ----------------------
 
-Ce projet permet de gérer des profils utilisateurs, des locations, des adresses et l'administration associée.
+Ce projet permet de gérer des profils utilisateurs, des locations, des adresses
+et l'administration associée.
 
 **Fonctionnalités principales :**
 
