@@ -95,3 +95,5 @@ Pipeline configuré avec GitHub Actions :
 ├── requirements.txt       # Dépendances
 └── tests.py               # Tests unitaires
 ```
+
+## Commits
